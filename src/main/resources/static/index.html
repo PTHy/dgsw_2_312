@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form method="get" action="/gretting">
+            <input type="text" name="say" placeholder="이름"><br>
+            <input type="text" name="to" placeholder="할 말"><br>
+            <button>SUBMIT</button>
+        </form>
+    </div>
+    <div>
+        <input type="text" id="say" placeholder="이름"><br>
+        <input type="text" id="to" placeholder="할 말"><br>
+        <button onclick="send()">SUBMIT</button>
+        <script type="text/javascript">
+            function send() {
+                var say = $("#say").val()
+                var to = $("#to").val()
+
+                console.log("찍음 "+say+" "+to);
+                location.href = "/gretting1/"+say+"/"+to;
+            }
+        </script>
+    </div>
+</body>
+</html>
